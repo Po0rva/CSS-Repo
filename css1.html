@@ -12,39 +12,18 @@
             margin:10px;
             box-sizing: border-box;
         }
-        
-        .background
+        div.parent div:first-child
         {
-            color:rgb(3, 3, 29);
-        }
-        h1.background
-        {
-            background-color:palegreen;
-        }
-        h2.background
-        {
-            background-color:rgb(153, 153, 161);
-        }
-        h2.background#unique
-        {
-            background-color:rgb(233, 52, 209);
-        }
-        h3.background
-        {
-            background-color:blue;
-        }
-        span.background
-        {
-            background-color:palevioletred;
+            background-color: burlywood;
         }
     </style>
 </head>
 <body>
-   <h1 class="background">Heading one</h1>
-   <h2 class="background">Heading two</h2>
-   <h2 id="unique" class="background">Heading two</h2>
-   <h3 class="background">Heading three</h3>
-   <br/>
-    <span class="background">I am span</span>
+    <div class="parent">
+        <div>I am div</div>
+        <h1>I am second div</h1>
+        <div>I am second div</div>
+        <div>I am third div</div>
+    </div> 
 </body>
 </html>
