@@ -12,51 +12,60 @@
             margin:10px;
             box-sizing: border-box;
         }
-        h2
+       
+        
+        h2:nth-child(1)
         {
            padding: 5px;
            background-color: burlywood;
            color: black;
+           transition-duration: 0.5s;
+           transition-timing-function: linear;
+        }
+        h2:nth-child(2)
+        {
+           padding: 5px;
+           background-color: blueviolet;
+           color: black;
+           transition-duration: 0.5s;
+           transition-timing-function: linear;
         }
         h2:hover
         {
-            background-color: blueviolet;
+            background-color: hotpink;
             cursor: pointer;
         }
-        div::selection
+        div.parent
         {
-            background: brown;
+            background-color: black;
+            min-height: 200px;
         }
-        input:focus
+        div.child
         {
-            background-color:khaki;
-            color: lightcoral;
-            font-size: 2rem;
+            background-color: burlywood;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        h2::after
+        div.parent:hover div.child
         {
-            content: "Iam after";
-            font-size: 0.5rem;
-            color: green;
-            position: relative;
+            transform: translateX(500px);
         }
-        h2::before
-        {
-            content: "Iam before";
-            font-size: 0.5rem;
-            color: gold;
-            position: relative;
-        }
+        
+        
         
     </style>
 </head>
 <body>
-    <h2>Iam heading</h2>
-    <div>pseudo selectors allows to select an element 
-        depending upon its state.
+    <h2>Iam heading</h2> 
+    <h2>Iam heading</h2> 
+    Transition is a change of state i.e 
+    from one state to another state. 
+    <hr/>
+    <div class="parent">
+        <div class="child"></div>
     </div>
-    <input type="text"/>
-    
-        
 </body>
 </html>
