@@ -12,18 +12,51 @@
             margin:10px;
             box-sizing: border-box;
         }
-        div.parent div:first-child
+        h2
         {
-            background-color: burlywood;
+           padding: 5px;
+           background-color: burlywood;
+           color: black;
         }
+        h2:hover
+        {
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+        div::selection
+        {
+            background: brown;
+        }
+        input:focus
+        {
+            background-color:khaki;
+            color: lightcoral;
+            font-size: 2rem;
+        }
+        h2::after
+        {
+            content: "Iam after";
+            font-size: 0.5rem;
+            color: green;
+            position: relative;
+        }
+        h2::before
+        {
+            content: "Iam before";
+            font-size: 0.5rem;
+            color: gold;
+            position: relative;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="parent">
-        <div>I am div</div>
-        <h1>I am second div</h1>
-        <div>I am second div</div>
-        <div>I am third div</div>
-    </div> 
+    <h2>Iam heading</h2>
+    <div>pseudo selectors allows to select an element 
+        depending upon its state.
+    </div>
+    <input type="text"/>
+    
+        
 </body>
 </html>
