@@ -12,60 +12,57 @@
             margin:10px;
             box-sizing: border-box;
         }
-       
-        
-        h2:nth-child(1)
-        {
-           padding: 5px;
-           background-color: burlywood;
-           color: black;
-           transition-duration: 0.5s;
-           transition-timing-function: linear;
-        }
-        h2:nth-child(2)
-        {
-           padding: 5px;
-           background-color: blueviolet;
-           color: black;
-           transition-duration: 0.5s;
-           transition-timing-function: linear;
-        }
-        h2:hover
-        {
-            background-color: hotpink;
-            cursor: pointer;
-        }
         div.parent
         {
-            background-color: black;
-            min-height: 200px;
+             height:500px;
+             background-color: black;
         }
         div.child
         {
-            background-color: burlywood;
-            height: 100px;
             width: 100px;
-            border-radius: 50%;
-            transition-duration: 0.5s;
-            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            height: 100px;
+            background-color: blue;
+            animation: 1s move ease;
+           animation-fill-mode: forwards;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           border-radius: 50%;
         }
-        div.parent:hover div.child
+        div.child-2
         {
-            transform: translateX(500px);
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: 1s move ease;
+           animation-fill-mode: forwards;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           border-radius: 50%;
+           animation-delay: 1s;
         }
         
-        
-        
+        @keyframes move
+        {
+          0%{
+            transform:translatey(0vw);
+          }
+          50%
+          {
+            transform: translate(300px, 200px);
+            background-color: aqua;  
+          }
+          100%{
+            transform:translatey(400px);
+            background-color: blueviolet;
+          }   
+        }
+       
     </style>
 </head>
 <body>
-    <h2>Iam heading</h2> 
-    <h2>Iam heading</h2> 
-    Transition is a change of state i.e 
-    from one state to another state. 
-    <hr/>
-    <div class="parent">
-        <div class="child"></div>
-    </div>
+   <div class="parent">
+       <div class="child"></div>
+       <div class="child-2"></div>
+   </div>
 </body>
 </html>
