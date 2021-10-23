@@ -1,0 +1,39 @@
+*
+{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins";
+    color: unset;
+}
+header
+{
+  background-image: url('../day.jpeg');
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*footer styles*/
+
+img.social
+{
+  width: 20px;
+  margin: 0px 5px;
+
+}
+footer
+{
+  background-color:rgb(152, 175, 106);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+}
