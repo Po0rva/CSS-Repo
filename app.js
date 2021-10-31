@@ -1,20 +1,28 @@
+//function greet(Name, age)
+//function greet(Name = 'chinni', age = 50)
+//{
+  //  console.log(Name, age)
+    //console.log('Hello')
+    //console.log('Hey ' + Name + "  your age is " + age)
+//}
+//greet('poorva','20')
+//greet()
 
-//variable
-//condition(i<arr.length)
-//iterator(i++)
+//function add(a = 0, b = 0)
+//{
+    //console.log(a + b)
+    //var sum = a + b
+   // return sum
+//}
 
-var list = document.querySelector('ul')
-console.log(list)
-
-var arr = ['go to th gym','cook oatmeal','Eat']
-
-arr.push('complete the assignment')
-
-for (var i = 0; i < arr.length; i++)
+var add = function(a = 0, b = 0)
 {
-    var element = document.createElement('li')
-    var textNode = document.createTextNode(arr[i])
-    console.log(arr[i])
-    element.appendChild(textNode)
-    list.appendChild(element)
+    
+    var sum = a + b
+    return sum
 }
+
+//console.log(add(10, 20))
+//add(10, 20)
+//var result = add(10, 20)
+//console.log(result)
