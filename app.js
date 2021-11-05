@@ -1,61 +1,25 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
-// const a = document.getElementsByTagName('input')[0]
-// const b = document.getElementsByTagName('input')[1]
- const add = document.querySelector('#add')
- const multiply = document.querySelector('#multiply')
-  const resultBox = document.querySelector('.result')
-const sum = () => 
-{
-    const result= parseInt(a.value) + parseInt(b.value)
-    console.log(result)
-    resultBox.innerHTML = result
-}
+var arr = [1, 2, 3, 4, 5, 6, 7, 8] 
 
-const product = () => 
-{
-    const result= parseInt(a.value) *  parseInt(b.value)
-    console.log(result)
-    resultBox.innerHTML = result
-}
+//arr.push(6) //it adds element ending of an array.
+//arr.unshift(6)  //it adds element starting of an array.
 
+//arr.shift()  //it removes the 1st element of an array.
 
- const calculate = (event,operation) =>{
-//     console.log(event.target)
-//     if (operation == 'add')
-//     {
-//         console.log('adding')
-//     }else if (operation => 'multiply')
-//     {
-//         console.log('multiply')
-//     }
+//var new_arr = arr.slice(4, 8)
+
+//br
+
+// var new_arr=[]
+
+// for(var i=0; i< arr.length; i++){
+//     if (arr[i] % 2 ==0) new_arr.push(arr[i])
 // }
-//  add.addEventListener('click', calculate('add'))
-//  multiply.addEventListener('click', calculate('multiply'))
 
-switch (operation) {
-    case "add":
-        resultBox.innerHTML = parseInt(a.value) + parseInt
-        (b.value)
-        break;
-    case "multiply":
-        resultBox.innerHTML = parseInt(a.value) * parseInt
-        (b.value)
-        break;
-    default:
-        resultBox.innerHTML = "not a valid operation"
-    }
+//br//
 
-}
+var new_arr = arr.filter((element, index) => {
+    //console.log(element, index)
+    if(element < 100) return true
+})
 
- add.addEventListener('click', (event) =>
- {
-     calculate(event, 'add')
- })
- multiply.addEventListener('click', (event) =>
- {
-    calculate(event, 'multiply')
- })
-
-
-
+console.log(new_arr)
