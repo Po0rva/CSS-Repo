@@ -1,56 +1,29 @@
-// let a = 20
-// var b = 40
-// console.log(a, b)
+//Promises==> promise is just an object whose value is 
+//uncertain at the moment but in future it might return the value
+//or not but actually its just an acknowledgement.
+
+//javascript under the HOOD//
+// while (true) {
+//     console.log('HI')
+// }                      this resulting in memory overflow
+//javascript is a single threaded operation//
+
+//core javascript have 2 parts 
+//Heap ==> manages the memory manages the garbage collections. it implements heap data structure to manage all the data.
+//Call stack ==> whatever we execute that is in call stack.
+
+console.log("one");
+console.log("two");
+setTimeout(() => {
+    console.log('timer');
+}, 5000)
+console.log("three");
+console.log("four"); 
+
+setTimeout(() => {console.log('Timer') }, 0)
+
+for (var i=0; i<5000; i++) {
+    console.log(i)
+}
 
 
-// if (true){
-//     var Name = 'Ferrari'
-// }
-// console.log(Name)
-
-
-// const print = ()=>{
-//     var Name = "mercedes"
-//     if (true){
-//         console.log(Name)
-//     }
-//     return Name
-// }
-// print()
-
-
-
-//console.log(this.alert('hi'))
-//console.log(this)   refers to self window or else the parent object.
-
-
-// let car = {
-//     name: "C class",
-//     manufacturer: "mercedes",
-//     print:function (a){
-//         console.log(a)
-//     }
-// }
-// car.print("Ferrari")
-// console.log(car.name)
-// console.log(car.manufacturer)
-
-
-// let car = {
-//     name: "C class",
-//     manufacturer: "mercedes",
-//     print:function (a){
-//         console.log(`${this.name} was created by ${this.manufacturer}`) 
-//     }
-// }
-
-// car.print()
-
-
-// setTimeout(() => {
-// console.log("Bhavani")
-// }, 0)
-// console.log("HI")
-
-var data = fetch('https://kea.kar.nic.in/')
-console.log(data)
