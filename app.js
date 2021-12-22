@@ -1,41 +1,33 @@
+// const ul = document.querySelector('ul')
+// const but = document.querySelector('button')
+// const getText = document.querySelector('input')
+// const parent = document.querySelector('div.grid')
+// const getData = async (item) => {
+//     console.log(item)
+//     const url =  `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
+//     console.log(url)
+//     const res = await fetch(url)
+//     const data = await res.json()
+//     const recipes = data.hits
+//     console.log(data.hits)
+//     recipes.forEach(item => {
+//         console.log(item)
+//     });
+// }
 
-
-//Revision of js//
-
-//setTimeout = it creates the timer for callback 
-//function. once the timer completes it takes
-//two parameters a callback function and timer
-//as soon as the timer runs out it will execute the function.
-
-let greet = new Promise((resolve, reject)=>{
-      setTimeout(()=>{
-       resolve("welcome")
-      }, 5000)
-})
-console.log(greet)
-
-//to get the value out of this greet//
-// setTimeout(()=>{
-//      console.log(greet)
-// },6000)  
-//instead of using the above setTimeout again
-// will be using (.then) to resolve
-
-// greet.then(value =>{
-//     console.log(value)
-//     return "welcome Again"
-
-    
-// }).then(newValue=>{
-//     console.log(newValue)
+// //add event listener to the button
+// but.addEventListener('click', (e) =>{
+//     getData(getText.value)
 // })
 
 
-let response = fetch('https://jsonplaceholder.typicode.com/todos/10')
 
-response.then(data =>{
-    return (data.json())
-}).then(content => {
-    console.log(content)
+const person = ({
+    name: 'poorva',
+    age: 10,
+    country: 'India'
 })
 
+const { name, age, country} = person
+
+console.log( nName, age, country)
