@@ -12,33 +12,36 @@ const getData = async (item) => {
     const recipes = data.hits
     console.log(data.hits)
     recipes.forEach(item => {
-        console.log(item)
-        const template =`
-                         
-                     <img class="card__image" src="https://i.ibb.co/RT0bjJq/food1.png" />
+        const {recipe} = item
+        const{label,image,source,calories} = recipe
+        const template =`   
+                     <img class="card__image" src="$(image)" />
                      <div class="card__data">
                         <div class="card__info">
-                           <h2>Nombre Comida</h2>
-                           <p>Descripcion de la comida, con ingredientes</p>
+                           <h2>$(label)</h2>
+                           <p>From $(source)</p>
                         </div>
-                        <h3 class="card__price">$7.50</h3>
+                        <h3 class="card__price">$(calories)</h3>
                         <button class="card__add">+</button>
                      </div>
                      `
                     
        const newCard = document.createElement('article')
        newCard.setAttribute('class', 'card')
+       newCard.setAttribute('style', 'margin-bottom:20px')
        newCard.innerHTML = template
-       console.log(newCard)
        parent.appendChild(newCard)              
     })
 }
 
 //add event listener to the button
 but.addEventListener('click', (e) =>{
+    parent.innerHTML = ''
     getData(getText.value)
 })
 
+
+//little error in json parsing//
 
 
 // const person = ({
