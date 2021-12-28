@@ -1,55 +1,14 @@
-const ul = document.querySelector('ul')
-const but = document.querySelector('button')
-const getText = document.querySelector('input')
-const parent = document.querySelector('div.grid')
+//library is a collection of methods like funcyions classes etc//
+//function of a library is to enhance the functionality//
 
-const getData = async (item) => {
-    console.log(item)
-    const url =  `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
-    console.log(url)
-    const res = await fetch(url)
-    const data = await res.json()
-    const recipes = data.hits
-    console.log(data.hits)
-    recipes.forEach(item => {
-        const {recipe} = item
-        const{label,image,source,calories} = recipe
-        const template =`   
-                     <img class="card__image" src="$(image)" />
-                     <div class="card__data">
-                        <div class="card__info">
-                           <h2>$(label)</h2>
-                           <p>From $(source)</p>
-                        </div>
-                        <h3 class="card__price">$(calories)</h3>
-                        <button class="card__add">+</button>
-                     </div>
-                     `
-                    
-       const newCard = document.createElement('article')
-       newCard.setAttribute('class', 'card')
-       newCard.setAttribute('style', 'margin-bottom:20px')
-       newCard.innerHTML = template
-       parent.appendChild(newCard)              
-    })
-}
+//Nodejs==> it used to build server.
+//nodejs is a run time environment that runs javascript
+//run time environment is
 
-//add event listener to the button
-but.addEventListener('click', (e) =>{
-    parent.innerHTML = ''
-    getData(getText.value)
-})
-
-
-//little error in json parsing//
-
-
-// const person = ({
-//     name: 'poorva',
-//     age: 10,
-//     country: 'India'
-// })
-
-// const { name, age, country} = person
-
-// console.log( name, age, country)
+//Chrome V8 is a JavaScript engine,
+ //which means that it executes JavaScript code.
+  //Originally, JavaScript was written to be executed
+   //by web browsers. ... V8 translates JavaScript 
+   //code directly into machine code* so that
+   // computers can actually understand it, 
+   //then it executes the translated, or compiled, code.
